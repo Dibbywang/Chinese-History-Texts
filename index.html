@@ -1,13 +1,115 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <title>Chinese History Project</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese History Translation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #ff9c9c;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #9c5b5b;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .funny-sentences {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #ff9c9c;
+        }
+        #copyMessage {
+            display: none;
+            margin-top: 10px;
+            color: green;
+            font-size: 1rem;
+        }
+    </style>
+    <script>
+        function copyEmail() {
+          var encodedEmail = "bG92ZWRteUBnbWFpbC5jb20="; // Base64 encoded email
+          var decodedEmail = atob(encodedEmail); // Decoding Base64
+          
+          // Create a temporary textarea element to hold the email
+          var tempTextArea = document.createElement("textarea");
+          tempTextArea.value = decodedEmail;
+          document.body.appendChild(tempTextArea);
+          
+          // Select and copy the email to clipboard
+          tempTextArea.select();
+          document.execCommand("copy");
+          
+          // Remove the temporary textarea
+          document.body.removeChild(tempTextArea);
+          
+          // Display the message that the email has been copied
+          var message = document.getElementById("copyMessage");
+          message.style.display = "block";
+          
+          // Hide the message after 3 seconds
+          setTimeout(function() {
+            message.style.display = "none";
+          }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Chinese History Translation</h1>
+    </header>
     <main>
-      <h1>Chinese History Project</h1>
-      <a href="DY-1.html">DY-1</a>
+        <section>
+            <h2>About the Project</h2>
+            <p>This website is dedicated to making Chinese historical texts more available for the English-speaking audience. Provided are some Chinese historical texts translated into English. They are far from perfect. If you see any section that requires polishing, please contact the author by clicking <a href="#" onclick="copyEmail()">here</a> to copy the email. We welcome more collaborators on GitHub to make the project better.</p>
+            <p id="copyMessage">Email copied to clipboard!</p>
+        </section>
+        
+        <section class="funny-sentences">
+            <h3>Funny Sentences from History</h3>
+            <ul>
+                <li>"Those who repeatedly do wrong will eventually bring about their own destruction."--DY-1-Zuo Zhuan</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Translated Books</h2>
+            <ul>
+                <li><a href="ZZ/ZZCPP.html">Zuo Zhuan</a></li>
+                <!-- You can add more links here as you translate more books -->
+            </ul>
+        </section>
     </main>
-  </body>
+</body>
 </html>
