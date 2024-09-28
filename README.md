@@ -1,1 +1,2 @@
 # Chinese-History-Texts
+Hi! This is Ding. This is a project that I started this year (2024) aimed at translating Chinese hitory texts and putting them available online. The github pages site contains all of my work. The text that I am working on now are the classics that are well known for Chinese people but rather obscure for the English speaking world. My purpose is to make them accessible and recognized by everyone around the world. Hope this will be an enjoyable experience for everyone. Please email me if there is any problem. As always, more help is greatly appreciated.
